@@ -10,6 +10,7 @@ body {
   color: $color-black;
   background-color: $color-white;
   height: 100%;
+  overflow:hidden;
 }
 
 p {
@@ -90,13 +91,5 @@ body {
   flex-direction: column;
 }
 
-
 @media only screen and (max-width: 768px) {
-  .center-parent {
-    flex-direction: column;
-  }
-  #lyrics {
-    font-size: 4vw;
-    margin-bottom: 2em;
-  }
 }
