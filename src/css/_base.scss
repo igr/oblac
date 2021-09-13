@@ -25,6 +25,8 @@ h1 {
   font-family: $font-title;
   text-align: center;
   cursor: default;
+  z-index: 20;
+  transition: all 2s ease-in-out;
   span {
     background-color: $color-black;
     color: $color-white;
@@ -33,25 +35,7 @@ h1 {
     display: inline-block;
     text-align: right;
     border-radius: 50%;
-    //animation: input-shadow ease-in-out 8s infinite;
-  }
-}
-
-@keyframes input-shadow {
-  0% {
-    text-shadow: none;
-  }
-  30% {
-    text-shadow: -.03em -.01em 0 $color-red;
-  }
-  50% {
-    text-shadow: -.01em -.01em 0 $color-red;
-  }
-  70% {
-    text-shadow: -.05em -.01em 0 $color-red;
-  }
-  100% {
-    text-shadow: none;
+    transition: all 2s ease-in-out;
   }
 }
 
@@ -74,7 +58,7 @@ h2 {
   em {
     font-size: 12vmin;
     color: rgba(0xff,0xff,0xff,0);
-    transition: text-shadow 1s ease-in;
+    transition: text-shadow 1s ease-in-out;
     text-shadow: 0 0 0 #fff;
     &:hover {
       text-shadow: 0.19em -0.17em 0 $color-red;
@@ -93,7 +77,6 @@ span.highlighted {
     bottom: 0;
     right: 0;
     z-index: -1;
-    //background: linear-gradient(90deg, #F7F492, #fefdec);
     background: linear-gradient(90deg, $color-red, #fddade);
     transform: skewX(10deg) skewY(-3deg);
     margin: 0.3em 0.1em 0.1em 0.1em;

@@ -11,23 +11,32 @@
   min-height: 100vh;
 }
 
-.heart-wrap {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.circle {
+  background: $color-black;
+  height: 20em;
+  width: 20em;
+  border-radius: 50%;
+  position: fixed;
+  top: 90vh;
+  left: -8vw;
+  transition-duration: 2s;
+  transform: scale(1);
+  z-index: 10;
 }
 
-.heart {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: 3000px;
-  min-width: 1920px;
-  pointer-events: none;
-  transform: translate3d(-50%, 0, 0);
+.circle:hover {
+  transform: scale(20);
+  top: -30vh;
+  left: -30vw;
+  transition-duration: 2s;
+}
+
+.circle:hover + #o {
+  h1 {
+    color: white;
+    span {
+      transform: rotateZ(-90deg) translateX(-0.45em) translateY(0.05em) skewX(0);
+      //transform-origin: 90% 50%;
+    }
+  }
 }
