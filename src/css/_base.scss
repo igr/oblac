@@ -73,8 +73,9 @@ h2 {
   }
   em {
     font-size: 12vmin;
-    color: $color-white;
+    color: rgba(ff,ff,ff,0);
     transition: text-shadow 1s ease-in;
+    text-shadow: 0 0 0 #fff;
     &:hover {
       text-shadow: 0.19em -0.17em 0 $color-red;
     }
