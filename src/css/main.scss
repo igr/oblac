@@ -20,22 +20,15 @@
   top: 90vh;
   left: -8vw;
   transition-duration: 2s;
-  transform: scale(1);
   z-index: 10;
+  cursor: pointer;
 }
 
-.circle:hover {
-  transform: scale(20);
-  top: -30vh;
-  left: -30vw;
-  transition-duration: 2s;
+.circle-full {
+  position: absolute;
+  top: -100vh;
+  left: -50vw;
+  width: 200vw;
+  height: 300vh;
 }
 
-.circle:hover + #o {
-  h1 {
-    color: white;
-    span {
-      transform: rotateZ(-90deg) translateX(-0.45em) translateY(0.05em) skewX(0);
-    }
-  }
-}
