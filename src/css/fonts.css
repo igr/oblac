@@ -3,6 +3,7 @@
 @font-face {
     font-family: FD_Bold;
     src: url('/fonts/Financier_Display_Bold.otf')
+    font-display: swap;
 }
 
 /*@font-face {*/
@@ -28,12 +29,12 @@
 /*}*/
 
 
-@font-face {
-    font-family: CD;
-    src: url('/fonts/ChronicleDisplayRoman.otf');
-    font-display: swap;
-    font-weight: 400;
-}
+/*@font-face {*/
+/*    font-family: CD;*/
+/*    src: url('/fonts/ChronicleDisplayRoman.otf');*/
+/*    font-display: swap;*/
+/*    font-weight: 400;*/
+/*}*/
 
 
 
