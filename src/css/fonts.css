@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: FD_Bold;
-    src: url('/fonts/Financier_Display_Bold.otf')
+    src: url('/fonts/Financier_Display_Bold.otf');
     font-display: swap;
 }
 
