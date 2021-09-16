@@ -21,7 +21,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="/css/fonts.css" rel="stylesheet">
+    <link rel="preload" href="/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/fonts.css"></noscript>
     <title>{{ title }}</title>
     {% block head %}{% endblock %}
   </head>
