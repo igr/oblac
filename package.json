@@ -1,6 +1,6 @@
 {
   "name": "oblac",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "oblac",
   "scripts": {
     "clean": "rm -rf out",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://oblac.com",
   "dependencies": {
-    "spignite": "^2.2.3"
+    "spignite": "^2.4.1"
   }
 }
