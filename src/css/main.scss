@@ -1,34 +1,9 @@
-@import "init/init";
+@import "variables";
 @import "reset";
-
 @import "base";
-
-@import "footer";
 
 .wrapper {
   position: relative;
   width: 100%;
   min-height: 100vh;
 }
-
-.circle {
-  background: $color-black;
-  height: 20vmin;
-  width: 20vmin;
-  bottom: -10vmin;
-  left: -8vmin;
-  border-radius: 50%;
-  position: absolute;
-  transition-duration: 2s;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.circle-full {
-  position: absolute;
-  bottom: -10vmax;
-  left: -100vmax;
-  width: 300vmax;
-  height: 300vmax;
-}
-
