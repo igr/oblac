@@ -47,12 +47,10 @@ h1 {
   text-align: center;
   cursor: default;
   z-index: 20;
-  mix-blend-mode: difference;
-  isolation: isolate;
   color: white;
   span {
     background-color: $color-white;
-    color: $color-black;
+    color: $color-red;
     width: 40vmin;
     height: 40vmin;
     display: inline-block;
