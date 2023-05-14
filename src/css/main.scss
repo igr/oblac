@@ -11,31 +11,10 @@
   min-height: 100vh;
 }
 
-.circle {
-  background: $color-black;
-  height: 20vmin;
-  width: 20vmin;
-  bottom: -10vmin;
-  left: -8vmin;
-  border-radius: 50%;
-  position: absolute;
-  transition-duration: 2s;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.circle-full {
-  position: absolute;
-  bottom: -10vmax;
-  left: -100vmax;
-  width: 300vmax;
-  height: 300vmax;
-}
-
-
 main p {
-  font-size: 3vmin;
-  position: fixed;
-  bottom: 10px;
+  position: relative;
+  top: -5em;
+  font-size: 4vmin;
   text-align: center;
+  margin: 40px;
 }

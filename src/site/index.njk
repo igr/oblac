@@ -7,18 +7,16 @@ layout: "main"
 
 
 {% block main %}
-  <div class="circle"></div>
   <div class="wrapper">
-    <main id="o" class="center-parent">
-      <div id="x" class="hide"><img src="/x2.gif" alt="Oblac"></div>
+    <main id="o" class="center-parent">      
       <h1><span>O</span>blac</h1>
-      <h2>get ideas <span class="highlighted" id="u">done</span></h2>
-      <h3><a href="https://igo.rs/contact" target="_blank" rel="noopener">contact</a><em>.</em><span class="dot"></span></h3>
+      <h2>ideas? <span class="highlighted" id="u">done!</span></h2>
+      <h3><a href="https://igo.rs/contact" target="_blank" rel="noopener">let's work together<em>.</em><span class="dot"></span></a></h3>
       <p>
-        20+ years of software craftsmanship.<br>
-        We develop values, not dogmas.<br>
-        As a partner, not a vendor.<br>
-        Brutally honest, no bullsh*t.<br>
+        20+ years of software <b>craftsmanship</b>.<br>
+        We develop <b>product</b> values, not dogmas.<br>
+        As a <b>partner</b>, not a vendor.<br>
+        Brutally <b>honest</b>, no bullsh*t.<br>
       </p>
     </main>
   </div>
@@ -26,97 +24,4 @@ layout: "main"
 
 
 {% block script %}
-<script>
-  function _(selector, src) {
-    if (src === undefined) {
-      src = document;
-    }
-    return src.querySelector(selector);
-  }
-  function __(selector) {
-    return document.querySelectorAll(selector);
-  }
-  function ready(callback) {
-    if (document.readyState !== 'loading') callback();
-    else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
-    else document.attachEvent('onreadystatechange', function () {
-        if (document.readyState === 'complete') callback();
-      });
-  }
-  function addClass(el, className) {
-    if (!el) return;
-    if (el.classList)
-      el.classList.add(className);
-    else
-      el.className += ' ' + className;
-  }
-  function removeClass(el, className) {
-    if (!el) return;
-    if (el.classList)
-      el.classList.remove(className);
-    else
-      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-  }
-  function toggleClass(el, addedClass) {
-    if (!el) return;
-    if (el.classList.contains(addedClass)) {
-      el.classList.remove(addedClass);
-      return false;
-    }
-    else {
-      el.classList.add(addedClass);
-      return true;
-    }
-  }
-
-  let circleIsOpen = false;
-
-  document.addEventListener('click', function (event) {
-    if (!event.target.matches('.circle')) return;
-    event.preventDefault();
-
-    circleIsOpen = toggleClass(event.target, "circle-full");
-
-    const h3 = _("h3 a");
-    if (h3.classList.contains("visible")) {
-      setTimeout(() => {
-        if (circleIsOpen) return;
-        h3.classList.remove("visible");
-      }, 1000)
-    } else {
-      h3.classList.add("visible");
-    }
-  }, false);
-
-  function spanAnimation() {
-    const h1 = _("h1");
-    const h2 = _("h2");
-    const x = _("#x");
-
-    addClass(h1, "hide");
-    addClass(h2, "hide");
-    //addClass(x, "show");
-    setTimeout(() => {
-      removeClass(h1, "hide");
-      removeClass(h2, "hide");
-      //removeClass(x, "show");
-    }, 900);
-  }
-
-  let mouseOn = false;
-  ready(() => {
-    _("#u").addEventListener("mouseenter", (e) => {
-      mouseOn = true;
-      setTimeout(() => {
-        if (!mouseOn) return;
-        spanAnimation(e.target);
-      }, 1000)
-    });
-    _("#u").addEventListener("mouseleave", (e) => {
-      mouseOn = false;
-    });
-  });
-
-</script>
-
 {% endblock %}
