@@ -17,7 +17,7 @@ body {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none;  
 }
 
 .center-parent {
@@ -26,7 +26,7 @@ body {
   align-items: center;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 100vh;
+  // height: 100vh;
   flex-direction: column;
 }
 
@@ -79,28 +79,6 @@ h2 {
   text-align: center;
   position: relative;
   top: -1em;
-  span.dot {
-    background-color: $color-black;
-    color: $color-white;
-    width: 6vmin;
-    height: 6vmin;
-    display: inline-block;
-    text-align: left;
-    border-radius: 50%;
-    position: relative;
-    top: 0.5vmin;
-    left: -2vmin;
-    z-index: -1;
-  }
-  em {
-    font-size: 12vmin;
-    color: rgba(255,255,255,0);
-    transition: text-shadow 1s ease-in-out;
-    text-shadow: 0 0 0 #fff;
-    &:hover {
-      text-shadow: 0.19em -0.17em 0 $color-red;
-    }
-  }
 }
 span.highlighted {
   position: relative;
@@ -134,12 +112,33 @@ h3 {
   text-align: center;
   position: relative;
   top: -1em;
-  visibility: hidden;
+  span.dot {
+    background-color: $color-black;
+    color: $color-white;
+    width: 6vmin;
+    height: 6vmin;
+    display: inline-block;
+    text-align: left;
+    border-radius: 50%;
+    position: relative;
+    top: 0.5vmin;
+    left: -2vmin;
+    z-index: -1;
+  }
+  em {
+    font-size: 12vmin;
+    color: rgba(255,255,255,0);
+    transition: text-shadow 1s ease-in-out;
+    text-shadow: 0 0 0 #fff;
+    &:hover {
+      text-shadow: 0.19em -0.17em 0 $color-red;
+    }
+  }
 }
 
 a {
   text-decoration: none;
-  color: $color-white;
+  color: $color-black;
   padding: 10px;
   transition: .2s;
   border-radius: 4px;
@@ -149,7 +148,7 @@ a {
     color: $color-white;
   }
   &:hover {
-    background-color: $color-white;
-    color: $color-white;
+    background-color: $color-red;
+    color: $color-black;
   }
 }
