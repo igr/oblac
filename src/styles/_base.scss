@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 html {
   font-size: 62.5%;
 }
@@ -26,25 +28,7 @@ body {
   align-items: center;
   overflow-x: hidden;
   overflow-y: hidden;
-  // height: 100vh;
   flex-direction: column;
-}
-
-@media only screen and (max-width: 768px) {
-}
-
-.hide {
-  display: none;
-}
-.show {
-  display: block !important;
-}
-.visible {
-  visibility: visible;
-}
-
-p {
-  margin-top: 2rem;
 }
 
 h1 {
@@ -127,10 +111,6 @@ a {
   transition: .2s;
   border-radius: 4px;
 
-  &.visible:hover {
-    background-color: $color-red;
-    color: $color-white;
-  }
   &:hover {
     background-color: $color-red;
     color: $color-black;

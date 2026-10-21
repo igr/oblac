@@ -2,10 +2,12 @@
   "name": "oblac",
   "version": "3.0.0",
   "description": "oblac",
+  "type": "module",
   "scripts": {
-    "clean": "rm -rf out",
-    "dev": "node spig.mjs dev",
-    "build": "node spig.mjs"
+    "clean": "rm -rf dist",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,9 @@
   },
   "homepage": "https://oblac.com",
   "dependencies": {
-    "spignite": "^3.0.0"
+    "astro": "^7.4.1"
+  },
+  "devDependencies": {
+    "sass": "^1.106.0"
   }
 }
