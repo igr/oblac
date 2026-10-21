@@ -19,7 +19,14 @@ body {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;  
+  user-select: none;
+}
+
+// too short to fit everything, e.g. phones in landscape
+@media (max-height: 540px) {
+  body {
+    overflow-y: auto;
+  }
 }
 
 .center-parent {
@@ -56,25 +63,33 @@ h1 {
   }
 }
 
-h2 {
-  padding: 0;
-  margin: 0;
-  font-size: 8vmin;
-  cursor: default;
+.intro {
+  position: relative;
+  top: -9.6vmin; // same lift as h2 (1.2 × 8vmin)
+  max-width: 26em;
+  margin-top: 1vmin;
+  margin-bottom: 2.5vmin;
+  padding: 0 16px;
+  font-size: max(2.6vmin, 16px);
+  line-height: 1.45;
   text-align: center;
-  position: relative;
-  top: -1.2em;
-}
-span.highlighted {
-  position: relative;
-  z-index: 1;
-}
-#u {
-  cursor: cell;
-  display: inline-block;
+  text-wrap: balance;
+  cursor: default;
+  p + p {
+    margin-top: 1.4vmin;
+  }
+  .lead {
+    font-family: $font-title;
+    font-size: max(6vmin, 26px);
+    line-height: 1.2;
+    margin-bottom: 2vmin;
+  }
+  .examples span {
+    display: inline-block;
+  }
 }
 
-h3 {
+h2 {
   z-index: 10;
   padding: 0;
   margin: 0;
@@ -82,7 +97,7 @@ h3 {
   cursor: default;
   text-align: center;
   position: relative;
-  top: -2.2em;
+  top: -1.2em;
   span.dot {
     background-color: $color-black;
     color: $color-white;
@@ -94,14 +109,22 @@ h3 {
     position: relative;
     top: 0.5vmin;
     left: -2vmin;
-    z-index: -1;    
+    z-index: -1;
   }
   em {
     font-size: 12vmin;
-    color: rgba(255,255,255,0);    
+    color: rgba(255,255,255,0);
     text-shadow: 0 0 0 #fff;
     border-radius: 12vmin;
   }
+}
+span.highlighted {
+  position: relative;
+  z-index: 1;
+}
+#u {
+  cursor: cell;
+  display: inline-block;
 }
 
 a {
